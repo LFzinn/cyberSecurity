@@ -1,0 +1,13 @@
+.button-link {
+  padding: 2rem 1.5rem;
+  background-color: var(--red);
+  border-radius: 1.5rem;
+  color: #fff;
+  box-shadow: var(--dark_shadow);
+  font-size: 2.5rem;
+
+}
+
+.button-link:hover {
+  box-shadow: var(--light_shadow);
+}

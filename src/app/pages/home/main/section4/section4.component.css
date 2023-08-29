@@ -1,0 +1,23 @@
+.container {
+  max-width: 150rem;
+  margin: 10rem auto 5rem auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.content span {
+  font-size: 5rem;
+}
+
+.content p {
+  max-width: 100rem;
+  font-size: 1.8rem;
+  margin: 0 auto 5rem auto;
+}

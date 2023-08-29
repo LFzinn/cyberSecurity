@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+
+breakpoint-xsmall: 320px;
+breakpoint-small: 544px;
+breakpoint-medium: 768px;
+breakpoint-large: 1012px;
+breakpoint-xlarge: 1280px;
+breakpoint-xxlarge: 1440px;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;500;700&display=swap');
+
+@font-face {
+  font-family: 'bunny';
+  src: url('./assets/fonts/hubby-bunny-hubby-bunny-400.otf') format('woff2'),
+    url('./assets/fonts/hubby-bunny-hubby-bunny-400.ttf') format('woff');
+  font-display: swap;
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+
+}
+
+
+
+:root {
+  font-size: 62.5%;
+  --blue: #003b5c;
+  --red: #cf3828;
+  --green: #2e6c79;
+  --white: #cad2d0;
+  --black: #0d0e10;
+  --text: #9ca3af;
+
+  /* SHADOWS */
+  --dark_shadow: 0 0 0 1px #000,
+    0 30px 30px rgba(0, 0, 0, .07),
+    0 15px 15px rgba(0, 0, 0, .06),
+    0 10px 8px rgba(0, 0, 0, .05),
+    0 4px 4px rgba(0, 0, 0, .04),
+    0 2px 2px rgba(0, 0, 0, .03);
+  --light_shadow: 0 0 0 1px #fff,
+    0 30px 30px rgba(161, 160, 160, 0.07),
+    0 15px 15px rgba(251, 251, 251, 0.06),
+    0 10px 8px rgba(0, 0, 0, .05),
+    0 4px 4px rgba(0, 0, 0, .04),
+    0 2px 2px rgba(0, 0, 0, .03),
+    0 0 0 1px #000;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--black);
+  font-family: 'Geologica', 'roboto', sans-serif;
+  color: #fff;
+}
+
+p {
+  color: var(--text);
+}

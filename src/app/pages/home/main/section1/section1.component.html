@@ -1,0 +1,21 @@
+<section>
+
+  <div class="container">
+    <div class="card_content" *ngFor="let card of cards">
+      <img [src]="card.icon" alt="{{card.alt}}">
+
+      <div class="card_txt">
+        <h2 class="title">{{card.title}}</h2>
+        <p>{{card.description}}</p>
+      </div>
+      <nav>
+        <a [href]="card.url" target="_blank">Read More</a>
+        <a [href]="card.url" target="_blank">
+          <img class="arrow" src="../../../../../assets/icons/seta.png" alt="imagem de uma seta">
+        </a>
+
+      </nav>
+
+    </div>
+  </div>
+</section>
