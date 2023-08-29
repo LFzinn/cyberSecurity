@@ -11,3 +11,16 @@
 .button-link:hover {
   box-shadow: var(--light_shadow);
 }
+
+
+@media (max-width: 768px) {
+  .button-link {
+    padding: 2rem 1rem;
+    background-color: var(--red);
+    border-radius: 1.5rem;
+    color: #fff;
+    box-shadow: var(--dark_shadow);
+    font-size: 2rem;
+
+  }
+}

@@ -9,7 +9,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
+
 }
 
 .card_content {
@@ -55,4 +57,29 @@ section {
 
 .card_content nav a:hover {
   color: var(--red);
+}
+
+@media (max-width: 380px) {
+  .card_content {
+    gap: 1rem;
+    width: 23rem;
+
+  }
+
+  .card_content img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+
+}
+
+@media (max-width: 280px) {
+  .card_content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 18rem;
+
+  }
 }

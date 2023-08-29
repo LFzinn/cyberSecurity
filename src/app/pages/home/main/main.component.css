@@ -26,14 +26,17 @@ main {
 .main_txt {
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: center;
   gap: 1rem;
   align-items: center;
 }
 
 .logo {
-  font-size: 10rem;
+  font-size: 12rem;
 }
+
+
 
 .main_txt span {
   font-size: 1.8rem;
@@ -67,4 +70,45 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+
+@media (max-width: 980px) {
+  .main_txt .logo {
+    font-size: 10rem;
+  }
+
+  .main_txt span {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_txt .logo {
+    font-size: 5rem;
+  }
+
+  .main_txt span {
+    max-width: 50rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 544px) {
+  main {
+    margin: 10rem auto auto auto;
+
+  }
+
+  .box {
+    gap: 10rem;
+  }
+
+  .main_txt .logo {
+    font-size: 4rem;
+  }
+
+  .main_txt span {
+    max-width: 45rem;
+  }
 }

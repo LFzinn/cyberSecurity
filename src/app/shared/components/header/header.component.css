@@ -1,31 +1,19 @@
-header {
-  max-width: 100%;
-  box-shadow: var(--dark_shadow);
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+.navbar {
+  box-shadow: var(--light_shadow);
+  min-height: 10rem;
+  min-width: 100%;
 }
 
-.container {
-  height: 8rem;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar-brand {
+  font-size: 3.5rem;
 }
 
-.header_logo {
-  font-size: 4rem;
-}
-
-.header_logo b {
+.navbar-brand b {
   color: var(--red);
-}
-
-.container nav ul {
-  display: flex;
-  gap: 3rem;
-}
-
-.container nav ul a {
-  color: #ffff;
 }
 
 .social img {
@@ -42,5 +30,46 @@ header {
 }
 
 .social img:hover {
-  border: 1px solid #fff;
+  box-shadow: var(--light_shadow);
+}
+
+.navbar-toggler {
+  color: #fff;
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  height: 4rem;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-item {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.nav-item:hover {
+  color: var(--red);
+}
+
+.navbar-social nav {
+  display: flex;
+  gap: 3rem;
+}
+
+@media (max-width: 340px) {
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+
+  .navbar-social nav {
+    gap: 1rem;
+  }
+
+
 }
