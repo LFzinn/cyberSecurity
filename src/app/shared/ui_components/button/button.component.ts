@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
 
 
-  @Input() url: string = '#';
+  @Input() url: string = '';
   @Input() label: string = '';
 }

@@ -20,8 +20,17 @@ breakpoint-xxlarge: 1440px;
 
 }
 
+@font-face {
+  font-family: 'mountain';
+  src: url('./assets/fonts/chandler-mountain-chandler-mountain-black-800.ttf') format('woff2'),
+    url('./assets/fonts/chandler-mountain-chandler-mountain-extra-light-slant-200.ttf') format('woff');
+  font-display: swap;
+
+}
+
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 16px;
 }
 
 ::-webkit-scrollbar-thumb {

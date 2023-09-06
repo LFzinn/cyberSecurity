@@ -1,0 +1,15 @@
+<div class="container">
+  <H3>Risk & Compliance Services</H3>
+  <p class="subTitle">The process of evaluating, indentifying and managing risks associated with a business, and
+    ensuring compliance
+    with relevant regulations and standards.</p>
+  <div class="group_container">
+    <div class="group" *ngFor="let group of groups">
+      <img [src]="group.icon" alt="{{group.alt}}">
+      <div class="group_txt">
+        <h4>{{group.title}}</h4>
+        <p class="description">{{group.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="box">
+  <div class="container">
+
+
+    <div class="title_group">
+      <h3>Challenges in the</h3>
+      <span>Financial Industry</span>
+    </div>
+
+
+    <div class="group_container">
+      <div class="group" *ngFor="let item of cards">
+        <img [src]="item.icon" alt={{item.alt}}>
+        <div class="group_txt">
+          <h4 class="group_title">{{ item.title }}</h4>
+          <p class="description">{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="group2_container">
+      <div class="group2">
+        <div class="group2_title">
+          <h3>Our Value Proposition for</h3>
+          <span>Financial Services</span>
+        </div>
+        <div class="checkGroup">
+          <div class="check" *ngFor="let item of items">
+            <img src="../../../../../assets/page2_assets/check1.png" alt="icone de um quadrado com um V dentro">
+            <span class="check_item">{{item.title}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>

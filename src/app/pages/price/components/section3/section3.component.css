@@ -1,0 +1,284 @@
+.box {
+  background-color: var(--black);
+  background-image: url('../../../../../assets/images/lines1.png');
+  background-position: end;
+  background-repeat: no-repeat;
+  color: #fef6f3;
+}
+
+.container {
+  font-family: 'Geologica', 'roboto', sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_container {
+  width: 100%;
+  margin: 5rem auto;
+  gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_header {
+  cursor: pointer;
+  width: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 8rem;
+  border-radius: 2rem;
+  background-color: #fef6f3;
+  max-width: 100%;
+
+}
+
+.header_active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  transition: background-color 0.3s;
+  border-radius: 1rem;
+
+}
+
+.card_header a {
+  text-align: center;
+  color: #000;
+  font-size: 3rem;
+}
+
+.title_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.title_content .title {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.title_btn span {
+  font-size: 2rem;
+}
+
+
+
+.price_btn {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 5rem;
+  cursor: pointer;
+
+}
+
+.price_btn span {
+  font-size: 2.5rem
+}
+
+
+.changePrice {
+  display: inline-block;
+  position: relative;
+  width: 4.5rem;
+  height: 2.5rem;
+  background-color: #fef6f3;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+
+
+
+.changePrice .ball {
+  position: absolute;
+  top: 5px;
+  left: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: left 0.2s;
+}
+
+.year .ball {
+  left: 2.5rem;
+  background-color: var(--red);
+}
+
+.month .ball {
+  left: 4px;
+  background-color: #000;
+
+}
+
+.monthly {
+  font-weight: 700;
+  color: var(--red);
+}
+
+
+.card_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  width: 45rem;
+  height: 40rem;
+  gap: 2rem;
+  box-shadow: var(--light_shadow);
+  background-color: #000;
+  border-radius: 2rem;
+}
+
+.card_group .card_title {
+  font-size: 2.5rem;
+  color: var(--red);
+}
+
+.card_group p {
+  color: #fef6f3;
+  font-size: 1.9rem;
+}
+
+.card_group .value {
+  font-size: 2rem;
+}
+
+.card_group .value b {
+  font-size: 5rem;
+}
+
+.card_group a {
+  border-radius: 0.5rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  font-size: 2.5rem;
+  background-color: #fef6f3;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+
+}
+
+.focusCard {
+  background: var(--red);
+  color: #000;
+  box-shadow: var(--light_shadow);
+  transition: background-color 0.3s;
+}
+
+.focusCard .card_title {
+  color: #fef6f3;
+}
+
+.focusCard p {
+  color: #000;
+}
+
+.focusCard a {
+  background-color: #000;
+  color: #fef6f3;
+}
+
+.web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upCard {
+
+  background: #fef6f3;
+  height: 30rem;
+  box-shadow: var(--dark_shadow);
+  color: #000;
+  transition: background-color 0.3s;
+}
+
+.upCard p {
+  color: #000;
+}
+
+.upCard a {
+  color: #fef6f3;
+  background-color: #000;
+}
+
+.recomended {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background-color: #fef6f3;
+  color: #000;
+  font-size: 2rem;
+  border-radius: 2rem;
+}
+
+.api {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .card_group {
+    padding: 2rem;
+    width: 35rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card_group {
+    padding: 1rem;
+    width: 30rem;
+  }
+
+  .card_group .value {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+
+  .card_group .value b {
+    font-size: 4rem;
+  }
+
+  .title_content .title {
+    font-size: 2rem;
+  }
+
+  .price_btn {
+    gap: 1rem;
+  }
+
+  .price_btn span {
+    font-size: 2rem;
+  }
+
+  .card_header a {
+    font-size: 2rem;
+  }
+}

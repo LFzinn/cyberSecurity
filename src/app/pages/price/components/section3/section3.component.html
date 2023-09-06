@@ -1,0 +1,67 @@
+<div class="box">
+  <div class="container">
+    <div class="card_container">
+      <div class="card_header">
+        <a [class.header_active]="!this.isAPI" (click)="changeHeader()">Web Application</a>
+        <a [class.header_active]="this.isAPI" (click)="changeHeader()">API</a>
+      </div>
+      <div class="title_content">
+        <span class="title">API PROTECTION</span>
+
+        <div class="price_btn">
+          <span [class.monthly]="this.isMonthly" (click)="changePrice()">Monthly</span>
+          <div class="changePrice" [class.month]="this.isMonthly" [class.year]="!this.isMonthly"
+            (click)="changePrice()">
+            <div class="ball"></div>
+          </div>
+          <span [class.monthly]="!this.isMonthly" (click)="changePrice()">Yearly</span>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="card api" *ngIf="this.isAPI">
+        <div class="card_group">
+          <span class="card_title">Premium</span>
+          <p>Fully Managed Web App & API Security</p>
+          <span class="value"><b>{{this.price2}}</b>/API Host/Billied {{ this.time2 }}</span>
+          <a href="#">Start Free Trial</a>
+        </div>
+        <div class="card_group">
+          <span class="card_title">Enterprise</span>
+          <p>Fully Managed Web App & API Security for Enterprises.</p>
+          <span class="value"><b>Custom</b>/Custom Billed</span>
+          <a href="#">Start Free Trial</a>
+        </div>
+
+      </div>
+
+      <div class="card web" *ngIf="!this.isAPI">
+        <div class="card_group">
+          <span class="card_title">Advance</span>
+          <p>Comprehensive Web App & API Security.</p>
+          <span class="value"><b>{{ this.price1 }}</b>/App/{{ time }}</span>
+          <a href="#">Start Free</a>
+        </div>
+        <div class="card_group" [ngClass]="{'upCard' : this.isMonthly, 'focusCard': !this.isMonthly }">
+          <span class="recomended" *ngIf="!this.isMonthly">Recommended</span>
+          <span class="card_title">Premium</span>
+          <p>Fully Managed Web App & API Security.</p>
+          <span class="value"><b>{{ this.price2 }}</b>/App/{{ time }}</span>
+          <a href="#">Get Started Now</a>
+        </div>
+        <div class="card_group">
+          <span class="card_title">Enterprise</span>
+          <p>Fully Managed Web App & API Security for Enterprises.</p>
+          <span class="value"><b>Custom</b>/Custom Billed</span>
+          <a href="#">Get Started Now</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
