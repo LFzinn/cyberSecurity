@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SectionModel } from 'src/app/shared/components/header/models/section';
+import { GsapService } from 'src/app/shared/services/gsap.service';
 
 @Component({
   selector: 'app-section1',
   templateUrl: './section1.component.html',
   styleUrls: ['./section1.component.css']
 })
-export class section1Component {
+export class section1Component implements OnInit {
+
+  constructor(private gsapService: GsapService) { }
+
+  ngOnInit(): void {
+    const element = document.querySelector('.element-section1') as HTMLElement;
+
+    this.gsapService.animateOnScroll(element);
+  }
+
+
   icon1 = '../../../../../assets/icons/olho.png'
   icon2 = '../../../../../assets/icons/senha.png'
   icon3 = '../../../../../assets/icons/atencao.png'

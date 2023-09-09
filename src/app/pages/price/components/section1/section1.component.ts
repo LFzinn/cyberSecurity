@@ -1,11 +1,17 @@
-import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, OnInit } from '@angular/core';
 import { CountService } from 'src/app/shared/services/count.service';
+import { GsapService } from 'src/app/shared/services/gsap.service';
 
 @Component({
   selector: 'app-section1',
   templateUrl: './section1.component.html',
   styleUrls: ['./section1.component.css']
 })
+
+
+
+
+
 export class Section1Component implements AfterViewInit {
 
   private isVisible = false;
@@ -14,8 +20,15 @@ export class Section1Component implements AfterViewInit {
   (
     private countService: CountService,
     private elementRef: ElementRef,
+    private gsapService: GsapService
   ) {}
 
+
+  ngOnInit(): void {
+    const element = document.querySelector('.element') as HTMLElement;
+
+    this.gsapService.animateOnScroll(element);
+  }
 
 
   ngAfterViewInit(): void {

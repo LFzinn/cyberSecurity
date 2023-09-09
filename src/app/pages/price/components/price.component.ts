@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GsapService } from 'src/app/shared/services/gsap.service';
 
 @Component({
   selector: 'app-price',
   templateUrl: './price.component.html',
   styleUrls: ['./price.component.css']
 })
-export class PriceComponent {
+export class PriceComponent implements OnInit {
+
+  constructor(private gsapService: GsapService) { }
+
+  ngOnInit(): void {
+    const element = document.querySelector('.element-main') as HTMLElement;
+    this.gsapService.animateOnScroll(element);
+  }
 
   items = [
     { title : 'Virtually patch critical vulnerabilities with a 24 hour SLA'},

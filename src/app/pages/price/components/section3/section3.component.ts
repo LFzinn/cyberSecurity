@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GsapService } from 'src/app/shared/services/gsap.service';
 
 @Component({
   selector: 'app-section3',
   templateUrl: './section3.component.html',
   styleUrls: ['./section3.component.css']
 })
-export class Section3Component {
+export class Section3Component implements OnInit {
+
+  constructor(private gsapService: GsapService) { }
+
+  ngOnInit(): void {
+    const element4 = document.querySelector('.element4') as HTMLElement;
+    this.gsapService.animateOnScroll(element4);
+  }
+
   isMonthly: boolean = true;
   isAPI: boolean = false;
+  titleHeader: string = 'WEB APLICATION'
 
   price1 : string = '$99';
   price2 : string = '$399';
@@ -15,8 +25,14 @@ export class Section3Component {
   time2 : string = 'Monthly'
 
 
+
   changeHeader(){
     this.isAPI = !this.isAPI;
+    if(this.isAPI === true) {
+      this.titleHeader = 'API PROTECTION'
+    }else if(this.isAPI === false) {
+      this.titleHeader = 'WEB APLICATION'
+    }
   }
 
   changePrice(){
