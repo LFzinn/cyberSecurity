@@ -1,7 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-
-
 .navbar {
   box-shadow: var(--dark_shadow);
   min-height: 10rem;
