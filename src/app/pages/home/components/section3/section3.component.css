@@ -97,6 +97,10 @@
   color: #fff;
 }
 
+.readMore:hover {
+  color: var(--red);
+}
+
 @media (max-width: 1550px) {
   .container {
     margin: 10rem 2rem;

@@ -122,20 +122,22 @@
   margin: 0 auto;
   gap: 3rem;
   letter-spacing: 2px;
-
 }
 
 .prices {
+  cursor: pointer;
+
   padding: 1.5rem;
   border: 2px solid #fff;
   color: #fff;
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-size: 2rem;
 
 }
 
 
 .learMore {
+  cursor: pointer;
   color: #fff;
   font-size: 2rem;
 }

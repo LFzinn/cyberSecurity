@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GsapService } from 'src/app/shared/services/gsap.service';
+import { ScrollSectionService } from 'src/app/shared/services/scroll-section.service';
 
 @Component({
   selector: 'app-price',
@@ -8,7 +9,11 @@ import { GsapService } from 'src/app/shared/services/gsap.service';
 })
 export class PriceComponent implements OnInit {
 
-  constructor(private gsapService: GsapService) { }
+  constructor(private gsapService: GsapService, private scrollSectionService: ScrollSectionService) { }
+
+  scrollToSection(sectionId: string): void {
+    this.scrollSectionService.scrollTo(sectionId);
+  }
 
   ngOnInit(): void {
     const element = document.querySelector('.element-main') as HTMLElement;
